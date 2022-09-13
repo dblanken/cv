@@ -1,0 +1,4 @@
+<%- @sections = [ "name", "mission", "contact", "education", "languages", "employment", "volunteer", "work_projects", "personal_projects" ] -%>
+<%- @sections.each do |section| -%>
+<%= render section -%>
+<%- end -%>
