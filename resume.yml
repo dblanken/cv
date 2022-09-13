@@ -1,0 +1,54 @@
+Name:     Your Name
+Location: Your location
+
+Mission:
+  To do something great
+
+Summary: |
+  I like to do many things.  Here they are.
+
+Contact:
+  Email:      mail@me
+  Web:        somewebsiteurl.com
+  Twitter:    twitter_name
+  GitHub:     github_name
+  LinkedIn:   linked_in_name
+
+Languages:
+  - English
+
+Education:
+- Entity:   Location you attended School
+  Location: Location of that school
+  Started:  Year you started
+  Stopped:  Year you ended
+  Details:
+  - I did some very cool stuff
+
+Employment:
+- Role:       Your role/position
+  Entity:     Employer
+  Started:    Start Year
+  Stopped:    End Year
+  Details:
+  - I also did a lot of things here
+
+Volunteer:
+  - Role:    Participant
+    Entity:  Place you volunteered
+    Details:
+    - What  you did
+
+Work Projects:
+  - Name: Name of project
+    Description: |
+      A neat description of it
+    Languages:
+    - Programming language used
+
+Personal Projects:
+  - Name: Name of project
+    Description: |
+      A neat description of it
+    Languages:
+    - Programming language used

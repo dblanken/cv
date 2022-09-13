@@ -1,0 +1,12 @@
+<div class="rvt-layout__sidebar" id="section-nav">
+  <nav class="rvt-sidenav" aria-labelledby="sidenav-label" data-rvt-sidenav>
+    <span class="rvt-sidenav__label" id="sidenav-label">Sections</span>
+    <ul class="rvt-sidenav__list">
+      <% @sections.each do |section| %>
+        <li class="rvt-sidenav__item">
+          <a href="#<%= section %>" class="rvt-sidenav__link"><%= ActiveSupport::Inflector.humanize(section) %></a>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</div>

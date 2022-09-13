@@ -1,0 +1,21 @@
+<% if @config.respond_to?("work_projects") %>
+  <div class="rvt-card">
+    <div class="rvt-card__body">
+      <h2 class="rvt-card__title">
+        <a id="work_projects" href="#top">Work Projects</a>
+      </h2>
+      <% @config.work_projects.each do |work_projects| %>
+        <div class="rvt-card__content [ rvt-flow ]">
+          <h3><%= work_projects["Name"] %></h3>
+          <div>
+            <% work_projects["Languages"].each do |language| %>
+              <span class="rvt-badge"><%= language %></span>
+            <% end %>
+          </div>
+          <div><%= work_projects["Description"] %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <a class="rvt-button" href="#top">Top</a>
+<% end %>

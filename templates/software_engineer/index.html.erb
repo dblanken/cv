@@ -1,0 +1,22 @@
+<% @sections = [ "mission", "contact", "education", "languages", "employment", "volunteer", "work_projects", "personal_projects" ] %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/rivet-core@2.0.0/css/rivet.min.css">
+  </head>
+  <body>
+    <%= render "header" %>
+
+    <main id="main-content" class="rvt-layout__wrapper rvt-layout__wrapper--details rvt-container-lg">
+      <%= render "sidenav" %>
+      <div class="rvt-layout__content">
+        <% @sections.each do |section| %>
+          <%= render section %>
+        <% end %>
+      </div>
+    </main>
+  </body>
+</html>

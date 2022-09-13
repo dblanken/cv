@@ -1,0 +1,25 @@
+<% if @config.respond_to?("employment") %>
+  <div class="rvt-card">
+    <div class="rvt-card__body">
+      <h2 class="rvt-card__title">
+        <a id="employment" href="#top">Employment</a>
+      </h2>
+      <% @config.employment.each do |employment| %>
+        <div class="rvt-card__content [ rvt-flow ]">
+          <h3><%= employment["Role"] %></h3>
+          <div><%= employment["Entity"] %></div>
+          <div>
+            <%= employment["Location"] %>
+            (<%= employment["Started"] %> - <%= employment["Stopped"] %>)
+          </div>
+          <ul>
+            <% employment["Details"].each do |detail| %>
+              <li><%= detail %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <a class="rvt-button" href="#top">Top</a>
+<% end %>
