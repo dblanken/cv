@@ -1,7 +1,8 @@
 <%- if @config.respond_to?("contact") -%>
 ## Contact Information
+
   <%- @config.contact.each do |key, value| -%>
 * <%= key %>: <%= value %>
   <%- end -%>
-<%- end -%>
 
+<%- end -%>

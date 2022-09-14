@@ -1,7 +1,7 @@
 <%- if @config.respond_to?("Languages") -%>
 ## Languages
+
         <%- @config.languages.each do |language| -%>
 * <%= language -%>
 <%- end -%>
 <%- end -%>
-

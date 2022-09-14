@@ -3,9 +3,10 @@
 
 <%- @config.education.each do |education| -%>
 ### <%= education["Entity"] %> (<%= education["Location"] %> from <%= education["Started"] %> to <%= education["Stopped"] %>)
+
 <%- education["Details"].each do |detail| -%>
 * <%= detail %>
 <%- end -%>
-<%- end -%>
-<%- end -%>
 
+<%- end -%>
+<%- end -%>

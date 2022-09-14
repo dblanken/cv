@@ -1,12 +1,14 @@
 <%- if @config.respond_to?("work_projects") -%>
 ## Work Projects
+
       <%- @config.work_projects.each do |work_projects| -%>
 ### <%= work_projects["Name"] %>
+
 Languages:
+
             <%- work_projects["Languages"].each do |language| -%>
 * <%= language %>
 <%- end %>
 Description: <%= work_projects["Description"] %>
+<%- end %>
 <%- end -%>
-<%- end -%>
-

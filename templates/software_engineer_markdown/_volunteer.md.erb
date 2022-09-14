@@ -1,10 +1,12 @@
 <%- if @config.respond_to?("volunteer") -%>
 ## Volunteer
+
       <%- @config.volunteer.each do |volunteer| -%>
 ### <%= volunteer["Role"] -%> at <%= volunteer["Entity"] %>
+
             <%- volunteer["Details"].each do |detail| -%>
 * <%= detail %>
 <%- end -%>
-<%- end -%>
-<%- end -%>
 
+<%- end -%>
+<%- end -%>

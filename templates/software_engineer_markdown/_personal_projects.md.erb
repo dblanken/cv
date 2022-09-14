@@ -1,9 +1,12 @@
 <%- if @config.respond_to?("personal_projects") -%>
 ## Personal Projects
+
       <%- @config.personal_projects.each do |personal_projects| -%>
 ### <%= personal_projects["Name"] %>
+
             <%- if personal_projects.has_key?("Languages") -%>
 Languages:
+
                         <%- personal_projects["Languages"].each do |language| -%>
 * <%= language %>
 <%- end -%>
@@ -11,4 +14,3 @@ Languages:
 Description: <%= personal_projects["Description"] %>
 <%- end -%>
 <%- end -%>
-
