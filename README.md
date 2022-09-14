@@ -16,6 +16,14 @@ ruby cv.rb > index.html
 
 It should output what you wrote to the index.html file in the same directory.
 
+## PDF output is not working
+
+You must have pandoc installed to use this.  Once installed you can run:
+
+```bash
+./pdf.sh > resume.pdf
+```
+
 ## But I don't like some of your sections
 
 Remove them; it will not display it if the section is not listed.  If you'd like your own, you'd create a new partial, and call it from the index.html.erb file.
