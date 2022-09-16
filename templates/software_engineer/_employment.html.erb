@@ -4,19 +4,21 @@
       <h2 class="rvt-card__title">
         <a id="employment" href="#top">Employment</a>
       </h2>
-      <% @config.employment.each do |employment| %>
+      <% @config.employment.group_by { |employment| employment["Entity"] }.each do |entity, employments| %>
         <div class="rvt-card__content [ rvt-flow ]">
-          <h3><%= employment["Role"] %></h3>
-          <div><%= employment["Entity"] %></div>
-          <div>
-            <%= employment["Location"] %>
-            (<%= employment["Started"] %> - <%= employment["Stopped"] %>)
-          </div>
-          <ul>
-            <% employment["Details"].each do |detail| %>
-              <li><%= detail %></li>
-            <% end %>
-          </ul>
+          <h3><%= entity %></h3>
+          <% employments.each do |employment| %>
+            <h4><%= employment["Role"] %></h4>
+            <div>
+              <%= employment["Location"] %>
+              (<%= employment["Started"] %> - <%= employment["Stopped"] %>)
+            </div>
+            <ul>
+              <% employment["Details"].each do |detail| %>
+                <li><%= detail %></li>
+              <% end %>
+            </ul>
+          <% end %>
         </div>
       <% end %>
     </div>

@@ -3,9 +3,11 @@
     <span class="rvt-sidenav__label" id="sidenav-label">Sections</span>
     <ul class="rvt-sidenav__list">
       <% @sections.each do |section| %>
-        <li class="rvt-sidenav__item">
-          <a href="#<%= section %>" class="rvt-sidenav__link"><%= ActiveSupport::Inflector.humanize(section) %></a>
-        </li>
+        <% if @config.respond_to?(section) %>
+          <li class="rvt-sidenav__item">
+            <a href="#<%= section %>" class="rvt-sidenav__link"><%= ActiveSupport::Inflector.humanize(section) %></a>
+          </li>
+        <% end %>
       <% end %>
     </ul>
   </nav>

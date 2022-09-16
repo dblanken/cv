@@ -2,6 +2,7 @@ require 'yaml'
 require 'erb'
 require 'optparse'
 require_relative './lib/contact_linker'
+require_relative './lib/contact_markdown'
 require_relative './lib/config'
 require_relative './lib/acts_like_rails'
 

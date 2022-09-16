@@ -1,12 +1,18 @@
 <%- if @config.respond_to?("employment") -%>
 ## Employment
 
-        <%- @config.employment.each do |employment| -%>
-### <%= employment["Role"] -%> at <%= employment["Entity"] -%> from (<%= employment["Started"] -%> - <%= employment["Stopped"] -%>)
+<%- @config.employment.group_by { |employment| employment["Entity"] }.each do |entity, employments| -%>
+### <%= entity %>
+
+<%- employments.each do |employment| -%>
+#### <%= employment["SubEntity"] %>
+<%= employment["Role"] %>
+<%= employment["Started"] -%> - <%= employment["Stopped"] %>
 
                 <%- employment["Details"].each do |detail| -%>
 * <%= detail %>
-                <%- end -%>
+                <%- end %>
+<%- end -%>
 
         <%- end -%>
 <%- end -%>

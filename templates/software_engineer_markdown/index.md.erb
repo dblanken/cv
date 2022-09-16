@@ -1,4 +1,8 @@
-<%- @sections = [ "name", "mission", "contact", "education", "languages", "employment", "volunteer", "work_projects", "personal_projects" ] -%>
+---
+fontsize: 8pt
+geometry: margin=2cm
+---
+<%- @sections = [ "name", "mission", "summary", "contact", "education", "languages", "employment", "volunteer", "work_projects", "personal_projects" ] -%>
 <%- @sections.each do |section| -%>
 <%= render section -%>
 <%- end -%>

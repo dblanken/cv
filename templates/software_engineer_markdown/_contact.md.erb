@@ -1,8 +1,6 @@
 <%- if @config.respond_to?("contact") -%>
 ## Contact Information
 
-  <%- @config.contact.each do |key, value| -%>
-* <%= key %>: <%= value %>
-  <%- end -%>
+<%= @config.contact.map { |key, value| ContactMarkdown.for(key, value) }.join(' • ') %>
 
 <%- end -%>
