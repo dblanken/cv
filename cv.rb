@@ -6,7 +6,7 @@ require_relative './lib/contact_markdown'
 require_relative './lib/config'
 require_relative './lib/acts_like_rails'
 
-# require 'debug'
+require 'debug' if ENV['DEBUG']
 
 include ActsLikeRails
 
