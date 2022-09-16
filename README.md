@@ -14,7 +14,26 @@ Then you would run:
 ruby cv.rb > index.html
 ```
 
+or
+
+```bash
+./html.sh > index.html
+```
+
 It should output what you wrote to the index.html file in the same directory.
+
+### Command line arguments
+
+For a reminder of this in the application:
+```bash
+ruby cv.rb -h
+```
+
+--role: The role you're attempting to output.  In this case, it corresponds to the subdirectory underneath templates to use (default is 'software_engineer')
+
+--filename: The YAML file location to use (default is resume.yml)
+
+--type: The type of output you'd like; current options are html (default) or md
 
 ## PDF output is not working
 
@@ -26,4 +45,4 @@ You must have pandoc installed to use this.  Once installed you can run:
 
 ## But I don't like some of your sections
 
-Remove them; it will not display it if the section is not listed.  If you'd like your own, you'd create a new partial, and call it from the index.html.erb file.
+Remove them; it will not display it if the section is not listed.  If you'd like your own, you'd create a new partial, and call it from the index.<type>.erb file.
