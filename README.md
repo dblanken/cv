@@ -17,7 +17,7 @@ ruby cv.rb > index.html
 or
 
 ```bash
-./html.sh > index.html
+./bin/html.sh > index.html
 ```
 
 It should output what you wrote to the index.html file in the same directory.
@@ -40,7 +40,7 @@ ruby cv.rb -h
 You must have pandoc installed to use this.  Once installed you can run:
 
 ```bash
-./pdf.sh > resume.pdf
+./bin/pdf.sh > resume.pdf
 ```
 
 ## But I don't like some of your sections
