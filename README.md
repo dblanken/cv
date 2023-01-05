@@ -4,6 +4,11 @@
 
 I like to keep my resume in a YAML file for portability and readability, but I'd like to export it to multiple output formats.  This is an attempt to do such a thing with plain old ruby (for the most part).  Right now it'll output a index.html file with the contents of my resume YAML file.
 
+## Prerequesites
+
+* pandoc
+* pdflatex (for mac users, it's ```brew install basictex```)
+
 ## How would I run this with my own YAML file?
 
 You'd create your own resume.yml file, adhering to the YAML in the existing version for starters.
